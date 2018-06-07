@@ -1,0 +1,424 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #111111;
+  color: #A9B7C6;
+}
+body container {
+  width: 100%;
+  display: flex;
+}
+body container nav {
+  flex-basis: auto;
+  padding-right: 20px;
+}
+body container nav div {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 2s ease-out;
+}
+body container nav div ul {
+  padding-left: 0;
+  list-style: none;
+}
+body container nav div ul li {
+  white-space: nowrap;
+}
+body container nav div ul li label div {
+  display: inline-block;
+}
+body container nav div ul li label div.twoRows {
+  overflow: visible;
+  position: relative;
+  top: 8px;
+}
+@-webkit-keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+@-moz-keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+@keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+body container nav .option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  top: 13.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+body container nav .option-input:hover {
+  background: #9faab7;
+}
+body container nav .option-input:checked {
+  background: #40e0d0;
+}
+body container nav .option-input:checked::before {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  content: '\2716';
+  display: inline-block;
+  font-size: 26.66667px;
+  text-align: center;
+  line-height: 40px;
+}
+body container nav .option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #40e0d0;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+body container nav .option-input.radio {
+  border-radius: 50%;
+}
+body container nav .option-input.radio::after {
+  border-radius: 50%;
+}
+body container nav body {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: box;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  box-align: stretch;
+  -ms-flex-align: stretch;
+  background: #e8ebee;
+  color: #9faab7;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  text-align: center;
+}
+body container nav body div {
+  padding: 5rem;
+}
+body container nav body label {
+  display: block;
+  line-height: 40px;
+}
+body container svg {
+  flex-grow: 3;
+  width: 100%;
+  height: 100%;
+  background: #2b2b2b;
+}
+body container svg circle {
+  pointer-events: all;
+}
+body container svg polyline,
+body container svg line,
+body container svg circle,
+body container svg path {
+  fill: none;
+  stroke: #A9B7C6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: 0.2s;
+}
+body container svg polyline.invisible,
+body container svg line.invisible,
+body container svg circle.invisible,
+body container svg path.invisible {
+  fill: none !important;
+  stroke: none !important;
+}
+body container svg g.arrow.bestSolution.quality0 path,
+body container svg g.arrow.bestSolution.quality0 line {
+  stroke: #5d9e55;
+  stroke-width: 10;
+}
+body container svg g.arrow.bestSolution.quality0 text {
+  fill: #5d9e55;
+}
+body container svg g.arrow.bestSolution.quality1 path,
+body container svg g.arrow.bestSolution.quality1 line {
+  stroke: #639655;
+  stroke-width: 9;
+}
+body container svg g.arrow.bestSolution.quality1 text {
+  fill: #639655;
+}
+body container svg g.arrow.bestSolution.quality2 path,
+body container svg g.arrow.bestSolution.quality2 line {
+  stroke: #688f55;
+  stroke-width: 8;
+}
+body container svg g.arrow.bestSolution.quality2 text {
+  fill: #688f55;
+}
+body container svg g.arrow.bestSolution.quality3 path,
+body container svg g.arrow.bestSolution.quality3 line {
+  stroke: #6e8855;
+  stroke-width: 7;
+}
+body container svg g.arrow.bestSolution.quality3 text {
+  fill: #6e8855;
+}
+body container svg g.arrow.bestSolution.quality4 path,
+body container svg g.arrow.bestSolution.quality4 line {
+  stroke: #748155;
+  stroke-width: 6;
+}
+body container svg g.arrow.bestSolution.quality4 text {
+  fill: #748155;
+}
+body container svg g.arrow.bestSolution.quality5 path,
+body container svg g.arrow.bestSolution.quality5 line {
+  stroke: #797a55;
+  stroke-width: 5;
+}
+body container svg g.arrow.bestSolution.quality5 text {
+  fill: #797a55;
+}
+body container svg g.arrow.bestSolution.quality6 path,
+body container svg g.arrow.bestSolution.quality6 line {
+  stroke: #7f7356;
+  stroke-width: 4;
+}
+body container svg g.arrow.bestSolution.quality6 text {
+  fill: #7f7356;
+}
+body container svg g.arrow.bestSolution.quality7 path,
+body container svg g.arrow.bestSolution.quality7 line {
+  stroke: #856b56;
+  stroke-width: 3;
+}
+body container svg g.arrow.bestSolution.quality7 text {
+  fill: #856b56;
+}
+body container svg g.arrow.bestSolution.quality8 path,
+body container svg g.arrow.bestSolution.quality8 line {
+  stroke: #8b6456;
+  stroke-width: 2;
+}
+body container svg g.arrow.bestSolution.quality8 text {
+  fill: #8b6456;
+}
+body container svg g.arrow.bestSolution.quality9 path,
+body container svg g.arrow.bestSolution.quality9 line {
+  stroke: #905d56;
+  stroke-width: 1;
+}
+body container svg g.arrow.bestSolution.quality9 text {
+  fill: #905d56;
+}
+body container svg g.arrow.flight.nodeHover.quality0 path,
+body container svg g.arrow.flight.nodeHover.quality0 line {
+  stroke: #5d9e55;
+  stroke-width: 10;
+}
+body container svg g.arrow.flight.nodeHover.quality0 text {
+  fill: #5d9e55;
+}
+body container svg g.arrow.flight.nodeHover.quality1 path,
+body container svg g.arrow.flight.nodeHover.quality1 line {
+  stroke: #639655;
+  stroke-width: 9;
+}
+body container svg g.arrow.flight.nodeHover.quality1 text {
+  fill: #639655;
+}
+body container svg g.arrow.flight.nodeHover.quality2 path,
+body container svg g.arrow.flight.nodeHover.quality2 line {
+  stroke: #688f55;
+  stroke-width: 8;
+}
+body container svg g.arrow.flight.nodeHover.quality2 text {
+  fill: #688f55;
+}
+body container svg g.arrow.flight.nodeHover.quality3 path,
+body container svg g.arrow.flight.nodeHover.quality3 line {
+  stroke: #6e8855;
+  stroke-width: 7;
+}
+body container svg g.arrow.flight.nodeHover.quality3 text {
+  fill: #6e8855;
+}
+body container svg g.arrow.flight.nodeHover.quality4 path,
+body container svg g.arrow.flight.nodeHover.quality4 line {
+  stroke: #748155;
+  stroke-width: 6;
+}
+body container svg g.arrow.flight.nodeHover.quality4 text {
+  fill: #748155;
+}
+body container svg g.arrow.flight.nodeHover.quality5 path,
+body container svg g.arrow.flight.nodeHover.quality5 line {
+  stroke: #797a55;
+  stroke-width: 5;
+}
+body container svg g.arrow.flight.nodeHover.quality5 text {
+  fill: #797a55;
+}
+body container svg g.arrow.flight.nodeHover.quality6 path,
+body container svg g.arrow.flight.nodeHover.quality6 line {
+  stroke: #7f7356;
+  stroke-width: 4;
+}
+body container svg g.arrow.flight.nodeHover.quality6 text {
+  fill: #7f7356;
+}
+body container svg g.arrow.flight.nodeHover.quality7 path,
+body container svg g.arrow.flight.nodeHover.quality7 line {
+  stroke: #856b56;
+  stroke-width: 3;
+}
+body container svg g.arrow.flight.nodeHover.quality7 text {
+  fill: #856b56;
+}
+body container svg g.arrow.flight.nodeHover.quality8 path,
+body container svg g.arrow.flight.nodeHover.quality8 line {
+  stroke: #8b6456;
+  stroke-width: 2;
+}
+body container svg g.arrow.flight.nodeHover.quality8 text {
+  fill: #8b6456;
+}
+body container svg g.arrow.flight.nodeHover.quality9 path,
+body container svg g.arrow.flight.nodeHover.quality9 line {
+  stroke: #905d56;
+  stroke-width: 1;
+}
+body container svg g.arrow.flight.nodeHover.quality9 text {
+  fill: #905d56;
+}
+body.matrix container nav > div#navMatrix {
+  display: block;
+  max-height: 500px;
+  transition: max-height 2s ease-in;
+}
+body.map container nav > div#navMap {
+  display: block;
+  max-height: 500px;
+  transition: max-height 2s ease-in;
+}
+body p {
+  width: 100%;
+}
+body p.copy {
+  text-align: right;
+}
+@-webkit-keyframes click-wave {
+  0% {
+    height: 20px;
+    width: 60px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -70px;
+    margin-top: -90px;
+    opacity: 0;
+  }
+}
+body button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 13.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  width: 60px;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  background: #9faab7;
+  border: none;
+  outline: none;
+  margin-left: 20px;
+  z-index: 1000;
+  transition: all 0.15s ease-out 0s;
+  color: #fff;
+  display: inline-block;
+  padding: 2px 10px;
+  text-align: center;
+  text-shadow: 1px 1px 0 #000;
+}
+body button.active,
+body button:hover {
+  background-color: #40e0d0;
+}
+body button:active::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #40e0d0;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
